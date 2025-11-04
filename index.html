@@ -1,29 +1,65 @@
-<form id="movieForm">
-  <label>Titel:</label>
-  <input type="text" name="title">
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Filme & Serien Finder</title>
+</head>
+<body>
 
-  <label>Jahr:</label>
-  <input type="number" name="year">
+  <h1>Filme & Serien Finder</h1>
 
-  <label>Genre:</label>
-  <select name="genre">
-    <option value="28">Action</option>
-    <option value="35">Comedy</option>
-    <option value="18">Drama</option>
-  </select>
+  <form>
+    <label for="title">Titel:</label><br>
+    <input type="text" id="title" name="title"><br><br>
 
-  <label>Plattform:</label>
-  <select name="platform">
-    <option value="203">Netflix</option>
-    <option value="26">Amazon Prime</option>
-    <option value="157">Disney+</option>
-  </select>
+    <label for="year">Jahr:</label><br>
+    <input type="number" id="year" name="year"><br><br>
 
-  <label>Typ:</label>
-  <select name="type">
-    <option value="movie">Film</option>
-    <option value="tv_series">Serie</option>
-  </select>
+    <label for="genre">Genre:</label><br>
+    <select id="genre" name="genre">
+      <option value="">Alle Genres</option>
+      <option value="28">Action</option>
+      <option value="12">Abenteuer</option>
+      <option value="16">Animation</option>
+      <option value="35">Komödie</option>
+      <option value="80">Krimi</option>
+      <option value="99">Dokumentation</option>
+      <option value="18">Drama</option>
+      <option value="10751">Familie</option>
+      <option value="14">Fantasy</option>
+      <option value="36">Geschichte</option>
+      <option value="27">Horror</option>
+      <option value="10402">Musik</option>
+      <option value="9648">Mystery</option>
+      <option value="10749">Romanze</option>
+      <option value="878">Science Fiction</option>
+      <option value="10770">TV-Film</option>
+      <option value="53">Thriller</option>
+      <option value="10752">Kriegsfilm</option>
+      <option value="37">Western</option>
+    </select><br><br>
 
-  <button type="submit">Suchen</button>
-</form>
+    <label for="platform">Plattform:</label><br>
+    <select id="platform" name="platform">
+      <option value="">Alle Plattformen</option>
+      <option value="203">Netflix</option>
+      <option value="26">Amazon Prime Video</option>
+      <option value="157">Disney+</option>
+      <option value="372">Apple TV+</option>
+      <option value="387">Paramount+</option>
+      <option value="444">Sky Show</option>
+      <option value="388">HBO Max</option>
+    </select><br><br>
+
+    <label for="type">Typ:</label><br>
+    <select id="type" name="type">
+      <option value="">Beides</option>
+      <option value="movie">Film</option>
+      <option value="tv_series">Serie</option>
+    </select><br><br>
+
+    <button type="submit">Suchen</button>
+  </form>
+
+</body>
+</html>
