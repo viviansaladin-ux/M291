@@ -8,32 +8,41 @@
 <body>
 
   <div id="container">
-    <!-- Dark Mode Schalter -->
+
     <button id="darkModeToggle">Dark Mode</button>
 
     <h1 class="page-title">Filmsuche</h1>
 
     <form id="searchForm" class="search-box centered">
+
       <input type="text" id="titleInput" placeholder="Titel">
 
       <select id="yearInput">
         <option value="">Jahr</option>
-        <script>
-          const yearSelect = document.currentScript.parentNode;
-          for (let y = 2025; y >= 1950; y--) {
-            const option = document.createElement("option");
-            option.value = y;
-            option.textContent = y;
-            yearSelect.appendChild(option);
-          }
-        </script>
+      </select>
+
+      <select id="genreInput">
+        <option value="">Genre</option>
+      </select>
+
+      <select id="platformInput">
+        <option value="">Streaming-Plattform</option>
+      </select>
+
+      <!-- SORTIERUNG ERSCHEINT ERST NACH SUCHE -->
+      <select id="sortInput" class="hidden">
+        <option value="popularity.desc">Beliebtheit</option>
+        <option value="original_title.asc">Alphabetisch</option>
+        <option value="primary_release_date.desc">Neueste zuerst</option>
+        <option value="primary_release_date.asc">Aelteste zuerst</option>
       </select>
 
       <button type="submit">Suchen</button>
+
     </form>
 
-    <div id="results"></div>
-    <div id="details" class="hidden"></div>
+    <div id="resultsList"></div>
+
   </div>
 
   <script src="script.js"></script>
