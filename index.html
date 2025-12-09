@@ -7,44 +7,54 @@
 </head>
 <body>
 
-  <div id="container">
+<div id="container">
 
-    <button id="darkModeToggle">Dark Mode</button>
+  <button id="darkModeToggle">Dark Mode</button>
+  <h1 class="page-title">Filmsuche</h1>
 
-    <h1 class="page-title">Filmsuche</h1>
+  <form id="searchForm" class="search-box">
 
-    <form id="searchForm" class="search-box centered">
+    <input 
+      type="text" 
+      id="titleInput" 
+      placeholder="Filmtitel" 
+      minlength="2" 
+      maxlength="50"
+      pattern="[A-Za-z0-9 äöüÄÖÜß\-:!?.()]+"
+      title="Nur Buchstaben, Zahlen und gängige Sonderzeichen erlaubt">
 
-      <input type="text" id="titleInput" placeholder="Titel">
+    <select id="yearInput">
+      <option value="">Jahr</option>
+    </select>
 
-      <select id="yearInput">
-        <option value="">Jahr</option>
-      </select>
+    <select id="genreInput">
+      <option value="">Genre</option>
+    </select>
 
-      <select id="genreInput">
-        <option value="">Genre</option>
-      </select>
+    <select id="platformInput">
+      <option value="">Streaming-Plattform</option>
+    </select>
 
-      <select id="platformInput">
-        <option value="">Streaming-Plattform</option>
-      </select>
+    <button type="submit">Suchen</button>
 
-      <!-- SORTIERUNG ERSCHEINT ERST NACH SUCHE -->
-      <select id="sortInput" class="hidden">
-        <option value="popularity.desc">Beliebtheit</option>
-        <option value="original_title.asc">Alphabetisch</option>
-        <option value="primary_release_date.desc">Neueste zuerst</option>
-        <option value="primary_release_date.asc">Aelteste zuerst</option>
-      </select>
+  </form>
 
-      <button type="submit">Suchen</button>
-
-    </form>
-
-    <div id="resultsList"></div>
-
+  <!-- Sortierfeld, initial versteckt -->
+  <div id="sortContainer" class="hidden">
+    <label for="sortInput">Sortieren nach:</label>
+    <select id="sortInput">
+      <option value="popularity.desc">Beliebtheit</option>
+      <option value="original_title.asc">Alphabetisch</option>
+      <option value="primary_release_date.desc">Neueste zuerst</option>
+      <option value="primary_release_date.asc">Älteste zuerst</option>
+    </select>
   </div>
 
-  <script src="script.js"></script>
+  <div id="messageBox" class="hidden"></div>
+  <div id="resultsList"></div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
