@@ -2,9 +2,14 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+    <meta name="description" content="Suchst du einen Film, den du anschauen kannst 
+    und hast nur Zugriff auf bestimmte Plattform? Oder möchtest du einfach mehr Infos zu einem bestimmten Film?
+    Finde hier deine Filme mit Filtern nach Genre, Jahr und Streaming-Plattform">
   <title>Filmsuche</title>
   <link rel="stylesheet" href="styie.css">
 </head>
+
+ <main id="container">
 <body>
 
 <div id="container">
@@ -17,13 +22,14 @@
     <input 
       type="text" 
       id="titleInput" 
-      placeholder="Filmtitel" 
-      minlength="2" 
+      placeholder="Filmtitel"
+      minlength="2"
       maxlength="50"
       pattern="[A-Za-z0-9 äöüÄÖÜß\-:!?.()]+"
-      title="Nur Buchstaben, Zahlen und gängige Sonderzeichen erlaubt">
+      title="Mindestens 2 Zeichen, Buchstaben oder Zahlen">
 
     <select id="yearInput">
+    
       <option value="">Jahr</option>
     </select>
 
@@ -36,10 +42,8 @@
     </select>
 
     <button type="submit">Suchen</button>
-
   </form>
 
-  <!-- Sortierfeld, initial versteckt -->
   <div id="sortContainer" class="hidden">
     <label for="sortInput">Sortieren nach:</label>
     <select id="sortInput">
@@ -52,9 +56,17 @@
 
   <div id="messageBox" class="hidden"></div>
   <div id="resultsList"></div>
+</div>
 
+<!-- MODAL -->
+<div id="modalOverlay" class="hidden">
+  <div id="modal">
+    <span id="modalClose">×</span>
+    <div id="modalContent"></div>
+  </div>
 </div>
 
 <script src="script.js"></script>
 </body>
+</main>
 </html>
