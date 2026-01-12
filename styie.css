@@ -43,6 +43,11 @@ body.dark-mode #sortContainer {
   margin-bottom: 40px;
 }
 
+body.dark-mode .page-title {
+  color: white;
+}
+
+
 #darkModeToggle {
   position: absolute;
   top: 20px;
